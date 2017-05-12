@@ -24,12 +24,11 @@ GET /sell/buyer/product/list
             "type": 1,
             "foods": [
                 {
+                    "id": "123456",
                     "name": "皮蛋粥",
                     "price": 1.2,
                     "description": "好吃的皮蛋粥",
-                    "info": "皮蛋粥采用野生鸡蛋, 七七四九小时熬制而成",
                     "icon": "http://xxx.com",
-                    "image": "http://xxx.com"
                 }
             ]
         },
@@ -38,12 +37,11 @@ GET /sell/buyer/product/list
             "type": 2,
             "foods": [
                 {
+                    "id": "123457",
                     "name": "慕斯蛋糕",
                     "price": 10.9,
                     "description": "美味爽口",
-                    "info": "采用纯天然植物奶油精制而成",
                     "icon": "http://xxx.com",
-                    "image": "http://xxx.com"
                 }
             ]
         }
