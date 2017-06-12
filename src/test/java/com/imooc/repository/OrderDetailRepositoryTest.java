@@ -9,12 +9,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.List;
 
 /**
  * Created by 廖师兄
- * 2017-06-11 17:51
+ * 2017-06-11 23:29
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -39,16 +38,9 @@ public class OrderDetailRepositoryTest {
     }
 
     @Test
-    public void findByOrderIdIn() throws Exception {
-        List<String> orderIdList = Arrays.asList("11111111", "11111112");
-        List<OrderDetail> result = repository.findByOrderIdIn(orderIdList);
-        Assert.assertNotEquals(0, result.size());
-    }
-
-    @Test
     public void findByOrderId() throws Exception {
-        OrderDetail result = repository.findByOrderId("11111111");
-        Assert.assertEquals("11111111", result.getOrderId());
+        List<OrderDetail> orderDetailList = repository.findByOrderId("11111111");
+        Assert.assertNotEquals(0, orderDetailList.size());
     }
 
 }
