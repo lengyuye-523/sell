@@ -92,6 +92,8 @@ GET /sell/buyer/order/list
 
 ```
 openid: 18eu2jwk2kse3r42e2e
+page: 0 //从第0页开始
+size: 10
 ```
 
 返回
@@ -109,7 +111,6 @@ openid: 18eu2jwk2kse3r42e2e
       "buyerOpenid": "18eu2jwk2kse3r42e2e",
       "orderAmount": 0,
       "orderStatus": 0,
-      "payType": 1,
       "payStatus": 0,
       "createTime": 1490171219,
       "updateTime": 1490171219,
@@ -123,7 +124,6 @@ openid: 18eu2jwk2kse3r42e2e
       "buyerOpenid": "18eu2jwk2kse3r42e2e",
       "orderAmount": 0,
       "orderStatus": 0,
-      "payType": 1,
       "payStatus": 0,
       "createTime": 1490171219,
       "updateTime": 1490171219,
@@ -159,7 +159,6 @@ orderId: 161899085773669363
           "buyerOpenid": "18eu2jwk2kse3r42e2e",
           "orderAmount": 18,
           "orderStatus": 0,
-          "payType": 0,
           "payStatus": 0,
           "createTime": 1490177352,
           "updateTime": 1490177352,
@@ -176,6 +175,29 @@ orderId: 161899085773669363
             }
         ]
     }
+}
+```
+
+###取消订单
+
+```
+POST /sell/buyer/order/cancel
+```
+
+参数
+
+```
+openid: 18eu2jwk2kse3r42e2e
+orderId: 161899085773669363
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "成功",
+    "data": null
 }
 ```
 
