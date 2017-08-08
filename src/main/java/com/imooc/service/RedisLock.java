@@ -27,7 +27,7 @@ public class RedisLock {
         if(redisTemplate.opsForValue().setIfAbsent(key, value)) {
             return true;
         }
-
+        //currentValue=A   这两个线程的value都是B  其中一个线程拿到锁
         String currentValue = redisTemplate.opsForValue().get(key);
         //如果锁过期
         if (!StringUtils.isEmpty(currentValue)
