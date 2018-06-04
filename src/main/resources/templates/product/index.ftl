@@ -33,6 +33,9 @@
                             <label>图片</label>
                             <img height="100" width="100" src="${(productInfo.productIcon)!''}" alt="">
                             <input name="productIcon" type="text" class="form-control" value="${(productInfo.productIcon)!''}"/>
+
+                            <input id="input-id" type="file" class="file" data-preview-file-type="text">
+                            <p class="help-block">支持jpg、jpeg、png、gif格式，大小不超过5M</p>
                         </div>
                         <div class="form-group">
                             <label>类目</label>
@@ -54,7 +57,21 @@
             </div>
         </div>
     </div>
-
 </div>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-fileinput/3.0.0/js/fileinput.min.js"></script>
+<script>
+    $("#input-id").fileinput({
+        'uploadUrl': '/sell/image/upload',
+        'removeLabel': '取消',
+        'uploadLabel': '开始上传',
+        'browseLabel': '选择图片',
+        'allowedPreviewTypes': 'image',
+        'allowedFileTypes': 'image',
+        'allowedFileExtensions': [ 'jpg', 'jpeg', 'png', 'gif' ],
+        'maxFileSize': 5120
+    });
+</script>
 </body>
 </html>
