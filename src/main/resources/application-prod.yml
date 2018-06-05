@@ -40,3 +40,10 @@ logging:
     com.imooc.dataobject.mapper: trace
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+
+# 又拍云服务 见 https://console.upyun.com/services/file/
+upyun:
+  bucketName: XXX
+  userName: xxx
+  password: xxxx
+  imageHost: http://xxx.com/

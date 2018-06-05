@@ -1,5 +1,6 @@
 package com.imooc.service.impl;
 
+import com.imooc.config.UpYunConfig;
 import com.imooc.dataobject.ProductInfo;
 import com.imooc.dto.CartDTO;
 import com.imooc.enums.ProductStatusEnum;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by 廖师兄
@@ -26,26 +28,34 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductInfoRepository repository;
 
+    @Autowired
+    private UpYunConfig upYunConfig;
+
     @Override
 //    @Cacheable(key = "123")
     public ProductInfo findOne(String productId) {
-        return repository.findOne(productId);
+        return repository.findOne(productId).addImageHost(upYunConfig.getImageHost());
     }
 
     @Override
     public List<ProductInfo> findUpAll() {
-        return repository.findByProductStatus(ProductStatusEnum.UP.getCode());
+        return repository.findByProductStatus(ProductStatusEnum.UP.getCode()).stream()
+                .map(e -> e.addImageHost(upYunConfig.getImageHost()))
+                .collect(Collectors.toList());
     }
 
     @Override
     public Page<ProductInfo> findAll(Pageable pageable) {
-        return repository.findAll(pageable);
+        Page<ProductInfo> productInfoPage = repository.findAll(pageable);
+        productInfoPage.getContent().stream()
+                .forEach(e -> e.addImageHost(upYunConfig.getImageHost()));
+        return productInfoPage;
     }
 
     @Override
 //    @CachePut(key = "123")
     public ProductInfo save(ProductInfo productInfo) {
-        return repository.save(productInfo);
+        return repository.save(productInfo).addImageHost(upYunConfig.getImageHost());
     }
 
     @Override
