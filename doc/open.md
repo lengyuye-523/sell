@@ -1,8 +1,8 @@
 # 微信开放平台的开发使用
 > 本文档仅针对问我借用了账号的情况（借用了支付账号并且在有效期内）, 如果自己有开放账号, 可直接按照慕课网视频或者微信文档开发
 
-1. 准备好openid和网址, openid是在“师兄干货”里的那个。网址，比如支付调试网址是`http://abc.natapp.cc/sell/pay/create`, n这次接收code的网址是`http://abc.natapp.cc/wechat/qrUserInfo`
-2. 电脑浏览器下面的链接, 注意替换openid和你的网址(需要urlEncode)
+1. 准备好openid和网址, openid是在“师兄干货”里的那个。网址，比如支付调试网址是`http://abc.natapp.cc/sell/pay/create`, 这次接收code的网址是`http://abc.natapp.cc/wechat/qrUserInfo`
+2. 电脑浏览器下面的链接, 注意替换openid和接收code的网址(需要urlEncode，看后面的示例)
 
     ```
     https://open.weixin.qq.com/connect/qrconnect?appid=wx6ad144e54af67d87&redirect_uri=http%3A%2F%2Fsell.springboot.cn%2Fsell%2Fqr%2F{OPENID}&response_type=code&scope=snsapi_login&state={接收code的网址}
@@ -27,6 +27,7 @@
     ```
     拿到code之后即可获取扫码者的openid了, 还不清楚? 请观看慕课网《Spring Boot企业微信点餐系统》第12章卖家扫码登录部分
 5. 问：扫码之后, pc端不会跳转是什么原因?
-   答：{接收code的网址}不能访问
+   
+    答：{接收code的网址}不能访问
 
 
