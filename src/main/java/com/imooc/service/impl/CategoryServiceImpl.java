@@ -21,7 +21,11 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public ProductCategory findOne(Integer categoryId) {
-        return repository.findOne(categoryId);
+		/**
+		 * 查不到返回null
+		 * .get 抛异常
+		 */
+		return repository.findById(categoryId).orElse(null);
     }
 
     @Override

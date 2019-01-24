@@ -1,6 +1,6 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
     url: jdbc:mysql://127.0.0.1:3306/sell?characterEncoding=utf-8&useSSL=false
@@ -11,8 +11,6 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
-server:
-  context-path: /sell
 #logging:
 #  pattern:
 #    console: "%d - %msg%n"
@@ -49,3 +47,7 @@ upyun:
   userName: xxx
   password: xxxx
   imageHost: http://xxx.com/
+server:
+  servlet:
+    context-path: /sell
+    
