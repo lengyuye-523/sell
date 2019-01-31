@@ -20,8 +20,8 @@ spring:
 #    com.imooc.LoggerTest: debug
 
 wechat:
-  mpAppId: wxd898fcb01713c658
-  mpAppSecret: 47ccc303338cee6e62894fxxxxxxxxxxx
+  mpAppId: wx8f9f4215e1feefa2
+  mpAppSecret: f9555bf4147fbbb5c4b8173ce69982bf
   openAppId: wx6ad144e54af67d87
   openAppSecret: 91a2ff6d38a2bbccfb7e9xxxxxx
   mchId: 1483469312
@@ -32,9 +32,9 @@ wechat:
     orderStatus: e-Cqq67QxD6YNI41iRiqawEYdFavW_7pc7LyEMb-yeQ
 
 projectUrl:
-  wechatMpAuthorize: http://sell.natapp4.cc
-  wechatOpenAuthorize: http://sell.natapp4.cc
-  sell: http://sell.natapp4.cc
+  wechatMpAuthorize: http://lsx888.natapp1.cc
+  wechatOpenAuthorize: http://lsx888.natapp1.cc
+  sell: http://lsx888.natapp1.cc
 logging:
   level:
     com.imooc.dataobject.mapper: trace
