@@ -45,6 +45,8 @@
         </rollingPolicy>
     </appender>
 
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE"/>
+
     <root level="info">
         <appender-ref ref="consoleLog" />
         <appender-ref ref="fileInfoLog" />

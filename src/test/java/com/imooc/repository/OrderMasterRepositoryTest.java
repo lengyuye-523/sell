@@ -25,7 +25,7 @@ public class OrderMasterRepositoryTest extends SellApplicationTests {
     public void saveTest() {
         OrderMaster orderMaster = new OrderMaster();
         orderMaster.setOrderId("1234567");
-        orderMaster.setBuyerName("师兄");
+        orderMaster.setBuyerName("廖师兄");
         orderMaster.setBuyerPhone("123456789123");
         orderMaster.setBuyerAddress("幕课网");
         orderMaster.setBuyerOpenid(OPENID);
