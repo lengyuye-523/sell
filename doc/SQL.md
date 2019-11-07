@@ -71,3 +71,11 @@ create table `seller_info` (
 ) comment '卖家信息表';
 
 ```
+
+#### 样例图片链接
+
+```
+http://img1.mukewang.com/5dc3891e0001049611251125.jpg
+http://img1.mukewang.com/5dc389700001993908000800.jpg
+http://img1.mukewang.com/5dc3891e000174af08000800.jpg
+```
