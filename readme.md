@@ -8,6 +8,6 @@
 1. 扫码登录调试文档 见doc目录下的open.md
 
 
-# 代码更新记录
+# 功能大更新
 #### 2018-6-5
 1. 后台图片上传使用又拍云，[又拍云免费体验](https://console.upyun.com/register/?invite=HyTufSjS-)
